@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Rating Website</title>
+	<style>
+		.image-container {
+			display: flex;
+			align-items: center;
+		}
+
+		.vs {
+			font-size: 24px;
+			margin: 0 10px;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Photo Rating Website</h1>
+
+	<!-- Main content area -->
+	<main>
+		<center>
+			<h2>Choose the Best Photo</h2>
+	
+			<!-- Display two photos to compare -->
+			<div class="image-container">
+				<img src="pic1.jpg" alt="Image 1" width="200px" height="200px" onclick="showResult(this)">
+				<span class="vs">vs</span>
+				<img src="pic2.jpg" alt="Image 2" width="200px" height="200px" onclick="showResult(this)">
+			</div>
+
+			<!-- Submit button -->
+			<button type="submit">Choose the Best Photo</button>
+
+			<!-- Result message -->
+			<p id="result"></p>
+		</center>
+	</main>
+
+	<script>
+		function showResult(winner) {
+			// Get the other image
+			var images = document.getElementsByTagName("img");
+			var loser = (images[0] == winner) ? images[1] : images[0];
+
+			// Hide the loser image
+			loser.classList.add("hidden");
+
+			// Show the result message
+			var result = document.getElementById("result");
+			result.textContent = "The winner is " + winner.alt + "!";
+		}
+	</script>
+</body>
+</html>
