@@ -1,0 +1,15 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .vs {
+    font-size: 100px;
+    margin: 0 20px;
+  }
