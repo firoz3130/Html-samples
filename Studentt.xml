@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="Studentt.css"?>
+<VTU>
+<Student>
+<USN>USN : 1CD20CS046</USN>
+<Name>Name: Firos K</Name>
+<College>College: CIT</College>
+<Branch>Branch: CSE</Branch>
+<yoj>Year of Joining: 2020</yoj>
+<email>Email-ID: firosk7@gmail.com</email>
+</Student>
+<Student1>
+<USN>USN : 1CD20CS046</USN>
+<Name>Name: Firos K</Name>
+<College>College: CIT</College>
+<Branch>Branch: CSE</Branch>
+<yoj>Year of Joining: 2020</yoj>
+<email>Email-ID: firosk7@gmail.com</email>
+</Student1>
+<Student2>
+<USN>USN : 1CD20CS046</USN>
+<Name>Name: Firos K</Name>
+<College>College: CIT</College>
+<Branch>Branch: CSE</Branch>
+<yoj>Year of Joining: 2020</yoj>
+<email>Email-ID: firosk7@gmail.com</email>
+</Student2>
+</VTU>

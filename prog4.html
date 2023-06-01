@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+<head>
+<script>
+function vowel(str)
+{
+str=str.toLowerCase()
+for(var i=0;i<str.length;i++)
+{
+var c=str.charAt(i)
+if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+{
+document.write("FOund at "+(i+1)+" position")
+return
+}
+}
+document.alert("No vowels in this string")
+
+}
+function reverse(str)
+{
+var num=str
+var rev=' '
+var rem
+
+while(num>0)
+{
+rem=num%10
+rev=rev+rem
+
+num=parseInt(num/10)
+}
+document.write("The reverse of "+str + " is "+rev)
+}
+var str=prompt("Enter the input")
+if(isNaN(str))
+{
+	vowel(str)
+}
+else
+{
+reverse(str)
+}
+</script>
+</head>
+</html>

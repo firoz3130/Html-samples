@@ -1,0 +1,54 @@
+VTU{
+display: block;
+}
+Student{
+background-color:grey;
+border: solid 10px;
+ border-style: groove;
+display:block;
+margin:10px;
+}
+Student1{
+background-color:green;
+border: solid 10px;
+ border-style: groove;
+display:block;
+margin:10px;
+}
+Student2{
+background-color:blue;
+border: solid 10px;
+ border-style: groove;
+display:block;
+margin:10px;
+}
+USN{
+display:block;
+color:blue;
+margin:10px;
+}
+Name{
+display:block;
+color: cyan;
+margin:10px;
+}
+College{
+display:block;
+color: red;
+margin:10px;
+}
+Branch{
+display:block;
+color: green;;
+margin:10px;
+}
+yoj{
+display:block;
+color: orange;
+margin:10px;
+}
+email{
+display:block;
+color: brown;
+margin:10px;
+}

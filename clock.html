@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="1"/>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .clock {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .digit {
+      display: inline-block;
+      font-family: "Arial", sans-serif;
+      font-size: 120px;
+      font-weight: bold;
+      color: #fff;
+      padding: 0 20px;
+      line-height: 1;
+    }
+
+    .separator {
+      display: inline-block;
+      font-size: 120px;
+      color: #999;
+      line-height: 1;
+    }
+
+    .center {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Arial", sans-serif;
+      font-size: 24px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="digit"><?php echo date("H"); ?></div>
+    <div class="separator">:</div>
+    <div class="digit"><?php echo date("i"); ?></div>
+    <div class="separator">:</div>
+    <div class="digit"><?php echo date("s"); ?></div>
+    <div class="center"><?php echo date("A"); ?></div>
+  </div>
+</body>
+</html>

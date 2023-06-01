@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+<title>Document</title>
+</head>
+<body>
+<div class="parent">
+<div class="child">
+<div class="totale">
+<span id="totale-number" class="totale-number">0</span>
+</div>
+<div class="numbers-border">
+<div class="numbers">
+<button class="number-calc1" id="number-calc6">CE</button>
+<button class="number-calc1" id="number-calc5">/</button>
+<button class="number-calc1" id="number-calc4">*</button>
+<button class="number-calc1" id="number-calc3">-</button>
+<button class="num" id="number7">7</button>
+<button class="num" id="number8">8</button>
+<button class="num" id="number9">9</button>
+<button class="number-calc1" id="number-calc2">+</button>
+<button class="num" id="number4">4</button>
+<button class="num" id="number5">5</button>
+<button class="num" id="number6">6</button>
+<button id="number.">.</button>
+<button class="num" id="number1">1</button>
+<button class="num" id="number2">2</button>
+<button class="num" id="number3">3</button>
+<button class="num" id="number0">0</button>
+<button class="number-calc2" id="number-calc1">=</button>
+</divid>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+// css
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap");
+* {
+font-family: "Cairo", sans-serif;
+}
+body {
+background-color: #121221;
+}
+.parent {
+max-width: 400px;
+max-height: 250px;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.child {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+text-align: center;
+width: 100%;
+height: 100%;
+background-color: #eee;
+padding: 10px 0 10px 0;
+gap: 10px;
+border-radius: 5px;
+}
+.totale {
+display: flex;
+justify-content: flex-end;
+flex-direction: row;
+padding: 10px 0 10px 0;
+width: 95%;
+height: 25%;
+background-color: #202124;
+border-radius: 5px;
+color: white;
+font-size: 22px;
+font-weight: bold;
+}
+.totale-number {
+margin-right: 10px;
+}
+.numbers-border {
+padding: 10px 0 10px 0;
+width: 95%;
+height: 300px;
+background-color: #202124;
+border-radius: 5px;
+color: white;
+}
+.numbers {
+display: flex;
+row-gap: 30px;
+column-gap: 25px;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+button {
+transition: 0.3s;
+padding: 5px 30px;
+background-color: #3c4043;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+font-size: 14px;
+font-weight: bold;
+border: none;
+}
+button:hover {
+transition: 0.3s;
+background-color: #5c5d5f;
+}
+.number-calc1 {
+background-color: #70757a !important;
+}
+.number-calc1:hover {
+background-color: #7c8083 !important;
+}
+.number-calc2 {
+background-color: rgb(49, 122, 231) !important;
+padding: 5px 47% 5px 47%;
+}
+.number-calc2:hover {
+background-color: rgb(77, 135, 223) !important;
+}
+@media (max-width: 734px) {
+button {
+padding: 5px 20px;
+}
+.number-calc2 {
+padding: 5px 25% 5px 25%;
+}
+}
+@media (max-width: 561px) {
+button {
+padding: 5px 10px;
+}
+.number-calc2 {
+padding: 5px 15% 5px 15%;
+}
+}
+@media (max-width: 390px) {
+button {
+padding: 5px 5px;
+}
+.number-calc2 {
+padding: 5px 5% 5px 5%;
+}
+}
+// js
+const TOTALE = document.getElementById("totale-number");
+const BUTTONS = document.querySelectorAll("button");
+BUTTONS.forEach((BTN) => {
+const LETTER = BTN.innerHTML;
+BTN.addEventListener("click", (e) => {
+if (e.target.className === "num") {
+TOTALE.innerHTML = LETTER;
+}
+});
+});
+const CE = document.getElementById("number-calc6");
+CE.addEventListener("click", () => {
+TOTALE.innerHTML = 0;
+});
